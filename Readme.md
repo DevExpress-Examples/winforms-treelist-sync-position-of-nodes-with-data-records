@@ -41,7 +41,7 @@ End Sub
 
 <h3>Description</h3>
 
-The signature of the&nbsp;AfterDragNode event's delegate has been changed.&nbsp;<br>TreeList's&nbsp;<a href="https://docs.devexpress.com/WindowsForms/DevExpress.XtraTreeList.TreeListOptionsDragAndDrop.DragNodesMode">OptionsBehavior.DragNodes</a> property is now obsolete. Use TreeList's&nbsp;OptionsDragAndDrop.DragNodesMode property instead.
+The signature of the&nbsp;AfterDragNode event's delegate has been changed.&nbsp;<br>TreeList's&nbsp;OptionsBehavior.DragNodes property is now obsolete. Use TreeList's&nbsp;<a href="https://docs.devexpress.com/WindowsForms/DevExpress.XtraTreeList.TreeListOptionsDragAndDrop.DragNodesMode">OptionsDragAndDrop.DragNodesMode</a> property instead.
 
 <br/>
 
