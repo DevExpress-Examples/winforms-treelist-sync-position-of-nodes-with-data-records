@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# WinForms TreeList - Sync the position of child nodes with the position of corresponding records in the datasource
+# WinForms TreeList - Sync the position of child nodes with the position of corresponding records in the data source
 
 The TreeList control allows users to reorder nodes by dragging them with the mouse. If the user moves a node from one parent to another, the node's position is automatically saved in the data source (because it depends on the `ParentID` column value that is stored in the data source). When the user reorders the nodes in a child collection, the position of the nodes is reset after the application is closed and reopened (or after the data is reloaded).
 
