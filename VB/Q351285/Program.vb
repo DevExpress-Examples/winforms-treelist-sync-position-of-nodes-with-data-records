@@ -1,22 +1,20 @@
-﻿Imports Microsoft.VisualBasic
 Imports DevExpress.Skins
 Imports System
-Imports System.Collections.Generic
 Imports System.Windows.Forms
 
 Namespace Q351285
-	Friend NotInheritable Class Program
-		''' <summary>
-		''' The main entry point for the application.
-		''' </summary>
-		Private Sub New()
-		End Sub
-		<STAThread> _
-		Shared Sub Main()
-			Application.EnableVisualStyles()
-			Application.SetCompatibleTextRenderingDefault(False)
-			SkinManager.EnableFormSkins()
-			Application.Run(New Form1())
-		End Sub
-	End Class
+
+    Friend Module Program
+
+        ''' <summary>
+        ''' The main entry point for the application.
+        ''' </summary>
+        <STAThread>
+        Sub Main()
+            Call Application.EnableVisualStyles()
+            Application.SetCompatibleTextRenderingDefault(False)
+            Call SkinManager.EnableFormSkins()
+            Call Application.Run(New Form1())
+        End Sub
+    End Module
 End Namespace
