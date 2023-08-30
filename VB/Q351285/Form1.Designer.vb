@@ -1,5 +1,7 @@
-﻿Namespace Q351285
-    Partial Public Class Form1
+Namespace Q351285
+
+    Partial Class Form1
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -10,14 +12,14 @@
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Windows Form Designer generated code"
-
+#Region "Windows Form Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
@@ -34,10 +36,10 @@
             Me.treeList1 = New DevExpress.XtraTreeList.TreeList()
             Me.colText = New DevExpress.XtraTreeList.Columns.TreeListColumn()
             Me.colSort = New DevExpress.XtraTreeList.Columns.TreeListColumn()
-            DirectCast(Me.bindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.dataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.dataTable1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.treeList1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.bindingSource1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.dataSet1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.dataTable1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.treeList1), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             ' 
             ' bindingSource1
@@ -48,11 +50,11 @@
             ' dataSet1
             ' 
             Me.dataSet1.DataSetName = "NewDataSet"
-            Me.dataSet1.Tables.AddRange(New System.Data.DataTable() { Me.dataTable1})
+            Me.dataSet1.Tables.AddRange(New System.Data.DataTable() {Me.dataTable1})
             ' 
             ' dataTable1
             ' 
-            Me.dataTable1.Columns.AddRange(New System.Data.DataColumn() { Me.dataColumn1, Me.dataColumn2, Me.dataColumn3, Me.dataColumn4})
+            Me.dataTable1.Columns.AddRange(New System.Data.DataColumn() {Me.dataColumn1, Me.dataColumn2, Me.dataColumn3, Me.dataColumn4})
             Me.dataTable1.TableName = "Table1"
             ' 
             ' dataColumn1
@@ -76,7 +78,7 @@
             ' 
             ' treeList1
             ' 
-            Me.treeList1.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() { Me.colText, Me.colSort})
+            Me.treeList1.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.colText, Me.colSort})
             Me.treeList1.CustomizationFormBounds = New System.Drawing.Rectangle(1703, 737, 208, 176)
             Me.treeList1.DataSource = Me.bindingSource1
             Me.treeList1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -88,7 +90,7 @@
             Me.treeList1.OptionsBehavior.ShowEditorOnMouseUp = True
             Me.treeList1.Size = New System.Drawing.Size(428, 268)
             Me.treeList1.TabIndex = 0
-
+            AddHandler Me.treeList1.AfterDragNode, New DevExpress.XtraTreeList.AfterDragNodeEventHandler(AddressOf Me.treeList1_AfterDragNode)
             ' 
             ' colText
             ' 
@@ -112,27 +114,34 @@
             Me.Controls.Add(Me.treeList1)
             Me.Name = "Form1"
             Me.Text = "Form1"
-            DirectCast(Me.bindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.dataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.dataTable1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.treeList1, System.ComponentModel.ISupportInitialize).EndInit()
+            AddHandler Me.FormClosing, New System.Windows.Forms.FormClosingEventHandler(AddressOf Me.Form1_FormClosing)
+            AddHandler Me.Load, New System.EventHandler(AddressOf Me.Form1_Load)
+            CType((Me.bindingSource1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.dataSet1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.dataTable1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.treeList1), System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
-
         End Sub
 
-        #End Region
-
+#End Region
         Private bindingSource1 As System.Windows.Forms.BindingSource
-        Private dataSet1 As System.Data.DataSet
-        Private dataTable1 As System.Data.DataTable
-        Private dataColumn1 As System.Data.DataColumn
-        Private dataColumn2 As System.Data.DataColumn
-        Private dataColumn3 As System.Data.DataColumn
-        Private WithEvents treeList1 As DevExpress.XtraTreeList.TreeList
-        Private colText As DevExpress.XtraTreeList.Columns.TreeListColumn
-        Private dataColumn4 As System.Data.DataColumn
-        Private colSort As DevExpress.XtraTreeList.Columns.TreeListColumn
 
+        Private dataSet1 As System.Data.DataSet
+
+        Private dataTable1 As System.Data.DataTable
+
+        Private dataColumn1 As System.Data.DataColumn
+
+        Private dataColumn2 As System.Data.DataColumn
+
+        Private dataColumn3 As System.Data.DataColumn
+
+        Private treeList1 As DevExpress.XtraTreeList.TreeList
+
+        Private colText As DevExpress.XtraTreeList.Columns.TreeListColumn
+
+        Private dataColumn4 As System.Data.DataColumn
+
+        Private colSort As DevExpress.XtraTreeList.Columns.TreeListColumn
     End Class
 End Namespace
-
